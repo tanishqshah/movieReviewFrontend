@@ -1,0 +1,30 @@
+<c-carousel>
+    <c-carousel-indicators></c-carousel-indicators>
+    <c-carousel-inner>
+        <c-carousel-item *ngFor="let slide of slides">
+            <img alt="{{slide.title}}" class="d-block w-100 h-80" loading="eager" src="{{slide.src}}" />
+            <c-carousel-caption class="d-none d-md-block">
+                <h3 style="display: flex; justify-content: right;">{{slide.title}}</h3>
+                <div class="card-movie__details"
+                    style="display: flex; flex-direction: row;  align-items: center; justify-content: right;">
+                    <ul class="d-flex" style="list-style:none;">
+                        <li>2012</li>
+                        &nbsp;&nbsp;
+                        <li>119 mins</li>
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        <li>Action</li>
+                        <li>&nbsp;| &nbsp;</li>
+                        <li>Crime</li>
+                        <li>&nbsp;| &nbsp;</li>
+                        <li>Sci-fi</li>
+                    </ul>
+                </div>
+                <h6 style="display: flex;text-align: right; justify-content:right ;">{{slide.subtitle}}</h6>
+            </c-carousel-caption>
+        </c-carousel-item>
+    </c-carousel-inner>
+    <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
+    <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
+</c-carousel>
